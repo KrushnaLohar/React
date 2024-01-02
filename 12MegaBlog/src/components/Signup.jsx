@@ -31,10 +31,10 @@ function Signup() {
     }
 
     // Custom validation for password confirmation
-    // const validatePasswordConfirmation = (value) => {
-    //     const password = getValues('password');
-    //     return password === value || 'Passwords do not match';
-    // };
+    const validatePasswordConfirmation = (value) => {
+        const password = getValues('password');
+        return password === value || 'Passwords do not match';
+    };
 
     return (
         <div className="flex items-center justify-center">
@@ -92,7 +92,7 @@ function Signup() {
                             })}
                         />
 
-                        {/* <Input
+                        <Input
                             label='Confirm Password'
                             placeholder='Confirm your Password'
                             type='password'
@@ -100,7 +100,7 @@ function Signup() {
                                 required: true,
                                 validate: validatePasswordConfirmation,
                             })}
-                        /> */}
+                        />
 
                         <Button
                             type='submit'
