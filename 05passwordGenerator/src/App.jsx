@@ -1,16 +1,19 @@
 import { useState, useCallback, useEffect, useRef } from 'react'
 
-
-
 function App() {
+  // length set length of password initally password length is 1
   const [length, setLength] = useState(1)
+  // these for check box is no allowed or not
   const [numberAllowed, setNumberAllowed] = useState(false);
+  // for the char state i think you now understand right? hmm right? yeah I know you know just kidding
   const [charAllowed, setCharAllowed] = useState(false)
+  //  start pass will be empty
   const [password, setPassword] = useState("")
 
   //useRef hook
   const passwordRef = useRef(null)
 
+  // useCallback is hook jo array tum pass karoge as second argument 
   const passwordGenerator = useCallback(() => {
     let pass = ""
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
