@@ -11,7 +11,7 @@ function Signup() {
     const navigate = useNavigate()
     const [error, setError] = useState("")
     const dispatch = useDispatch()
-    const { register, handleSubmit } = useForm()
+    const { register, handleSubmit, getValues } = useForm()
 
     const create = async (data) => {
         // empty error
@@ -63,7 +63,7 @@ function Signup() {
 
                         <Input
                             label='Full Name: '
-                            placeholder='Enter your Password'
+                            placeholder='Enter your Name'
                             {...register('name', {
                                 required: true,
                             })}
